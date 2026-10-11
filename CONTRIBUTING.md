@@ -2,14 +2,14 @@
 
 ## Branch naming
 
-<type>/<issue number>-<short-description>, e.g. feature/56-customer-search, fix/85-customer-email-validation
+<type>/<issue number>-<short-description>, e.g. feature/56-customer-search, fix/85-customer-email-validation, docs/1-contributing-guidelines
 
 ## Commit messages
 
 This project follows Conventional Commits:
 <type>(scope): <description>
 
-Common types: feat, fix, docs, test, refactor, perf, build, ci, chore
+Common types: feat, fix, docs, test, refactor, perf, build, ci, chore, security
 
 ## Pull Requests
 
