@@ -1,0 +1,29 @@
+== Sistema operativo y arquitectura ==
+Darwin
+arm64
+
+== Shell por defecto ==
+/bin/zsh
+
+== Espacio libre en disco (unidad del repositorio) ==
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   460Gi   315Gi   121Gi    73%    3,0M  1,3G    0%   /System/Volumes/Data
+
+== Memoria disponible para Linux y Docker ==
+24 GB
+
+== Herramientas de trabajo (Parte 0) ==
+OK     git
+OK     gh
+OK     curl
+OK     wget
+OK     unzip
+OK     jq
+OK     tree
+OK     htop
+OK     tmux
+OK     shellcheck
+
+== Git ==
+git version 2.56.0
+afernandez354@alu.ucam.edu
