@@ -1,0 +1,378 @@
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker version[27m
+[7mdocker info[27m[K[A[47C[27md[27mo[27mc[27mk[27me[27mr[27m [27mv[27me[27mr[27ms[27mi[27mo[27mn[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mn[27mf[27mo[?2004l
+Client:
+ Version:           29.9.1
+ API version:       1.56
+ Go version:        go1.26.9
+ Git commit:        dfc520d
+ Built:             Wed Oct 14 18:31:22 2026
+ OS/Arch:           darwin/arm64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.96.0 (243774)
+ Engine:
+  Version:          29.9.1
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.26.9
+  Git commit:       b26fb77
+  Built:            Wed Oct 14 18:31:50 2026
+  OS/Arch:          linux/arm64
+  Experimental:     false
+ containerd:
+  Version:          v2.4.2
+  GitCommit:        b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc:
+  Version:          1.5.2
+  GitCommit:        v1.5.2-0-g29dd3dc2
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+Client:
+ Version:    29.9.1
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.149.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.31.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.38.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.6.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  4.96.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.7
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.44.1
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-mcp
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.6
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-model
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.7.4
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.3.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-pass
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-sandbox
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.26.0
+    Path:     /Users/alvaro/.docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 12
+  Running: 3
+  Paused: 0
+  Stopped: 9
+ Images: 25
+ Server Version: 29.9.1
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: local
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc version: v1.5.2-0-g29dd3dc2
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 7.0.14-linuxkit
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: aarch64
+ CPUs: 12
+ Total Memory: 7.748GiB
+ Name: docker-desktop
+ ID: a19b769b-257a-4df1-bce0-536ca7f5be6e
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///Users/alvaro/Library/Containers/com.docker.docker/Data/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker run hello-world[27m
+[7mdocker ps[27m[K
+[7mdocker ps -a[27m[K[A[A[46C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27mh[27me[27ml[27ml[27mo[27m-[27mw[27mo[27mr[27ml[27md[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[?2004l
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS                    PORTS                                         NAMES
+c6cc2a4c0a05   af51cdcf12ea          "docker-php-entrypoi…"   2 months ago   Up 21 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   home-finance-backend
+1a8f51f8a839   home-finance-worker   "docker-php-entrypoi…"   2 months ago   Up 21 minutes             8000/tcp                                      home-finance-worker
+e8cdbfaa9a40   postgres:16           "docker-entrypoint.s…"   6 months ago   Up 21 minutes             0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp   home-finance-db
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS                              PORTS                                          NAMES
+34bc7dc00f1e   hello-world           "/hello"                 1 second ago   Exited (0) Less than a second ago                                                  thirsty_wing
+c6cc2a4c0a05   af51cdcf12ea          "docker-php-entrypoi…"   2 months ago   Up 21 minutes (healthy)             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp    home-finance-backend
+1a8f51f8a839   home-finance-worker   "docker-php-entrypoi…"   2 months ago   Up 21 minutes                       8000/tcp                                       home-finance-worker
+ceafebc79730   appfutbol-backend     "docker-php-entrypoi…"   4 months ago   Exited (1) 4 months ago                                                            appfutbol-backend-1
+0a11c2d047e3   appfutbol-frontend    "docker-entrypoint.s…"   4 months ago   Exited (255) 4 months ago           0.0.0.0:4200->4200/tcp                         appfutbol-frontend-1
+01fd98a6a4ea   postgres:16-alpine    "docker-entrypoint.s…"   4 months ago   Exited (255) 4 months ago           0.0.0.0:5432->5432/tcp                         appfutbol-postgres-1
+2120af9fb993   examenapp-apache      "httpd-foreground"       5 months ago   Exited (137) 5 months ago                                                          examenapp_apache
+184c2847a51c   examenapp-php         "/usr/local/bin/dock…"   5 months ago   Exited (137) 5 months ago                                                          examenapp_php
+40eab9a14844   postgres:17-alpine    "docker-entrypoint.s…"   5 months ago   Exited (0) 5 months ago                                                            examenapp_pgsql
+36de2518d817   redis:alpine          "docker-entrypoint.s…"   5 months ago   Exited (0) 5 months ago                                                            examenapp_redis
+39cc98249ff6   sail-8.5/app          "start-container"        6 months ago   Exited (255) 6 months ago           0.0.0.0:5174->5174/tcp, 0.0.0.0:8080->80/tcp   mi-proyecto-laravel.test-1
+4b04f47b1976   mysql:8.4             "docker-entrypoint.s…"   6 months ago   Exited (255) 6 months ago           0.0.0.0:3306->3306/tcp, 33060/tcp              mi-proyecto-mysql-1
+e8cdbfaa9a40   postgres:16           "docker-entrypoint.s…"   6 months ago   Up 21 minutes                       0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp    home-finance-db
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker pull alpine:3.20[27m
+[7mdocker images[27m[K[A[45C[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27mu[27ml[27ml[27m [27ma[27ml[27mp[27mi[27mn[27me[27m:[27m3[27m.[27m2[27m0[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mm[27ma[27mg[27me[27ms[?2004l
+3.20: Pulling from library/alpine
+
+[1A[2K3f26bc2dec0b: Pulling fs layer [1B[1A[2K3f26bc2dec0b: Downloading [============>                                      ]  1.049MB/4.092MB[1B[1A[2K3f26bc2dec0b: Download complete [1B
+[1A[2Kcee42a41056b: Download complete [1B
+[1A[2K8b093306b817: Download complete [1B[3A[2K3f26bc2dec0b: Extracting 1 s[3B[3A[2K3f26bc2dec0b: Pull complete [3BDigest: sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc
+Status: Downloaded newer image for alpine:3.20
+docker.io/library/alpine:3.20
+                                                                                                                                               [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                                                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1malpine:3.20[0m                                          [39md9e853e87e55[0m       [39m13.7MB[0m         [39m4.17MB[0m        
+[34m[1mappfutbol-backend:latest[0m                             [39me3efefdabaea[0m        [39m810MB[0m          [39m198MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mappfutbol-frontend:latest[0m                            [39m197b5e9555af[0m       [39m1.61GB[0m          [39m400MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mcomposer:2[0m                                           [39m594647633874[0m        [39m304MB[0m         [39m77.2MB[0m        
+[34m[1mcontainer-registry.oracle.com/database/free:latest[0m   [39mf988b0c04c4c[0m       [39m13.1GB[0m         [39m3.53GB[0m        
+[34m[1mdocker-apache:latest[0m                                 [39mb5b78fa032ae[0m        [39m121MB[0m         [39m25.5MB[0m        
+[34m[1mdocker-php:latest[0m                                    [39m265a88fe07c0[0m        [39m2.8GB[0m          [39m622MB[0m        
+[34m[1mexamenapp-apache:latest[0m                              [39mf4bf3e782b2e[0m        [39m121MB[0m         [39m25.5MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mexamenapp-php:latest[0m                                 [39m0eaf553dc23a[0m        [39m2.8GB[0m          [39m623MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mhello-world:latest[0m                                   [39m11a3eb1597e8[0m       [39m22.6kB[0m         [39m10.3kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mhome-finance-backend:latest[0m                          [39mbb1198470a42[0m        [39m986MB[0m          [39m235MB[0m        
+[34m[1mhome-finance-frontend:latest[0m                         [39me8d8de2121bb[0m       [39m92.5MB[0m           [39m26MB[0m        
+[34m[1mhome-finance-prod-check-backend:latest[0m               [39m257264e88db9[0m        [39m985MB[0m          [39m235MB[0m        
+[34m[1mhome-finance-prod-check-frontend:latest[0m              [39ma99aa41bcd08[0m       [39m92.5MB[0m           [39m26MB[0m        
+[34m[1mhome-finance-prod-check-migrate:latest[0m               [39m288927ff4325[0m        [39m985MB[0m          [39m235MB[0m        
+[34m[1mhome-finance-prod-check-worker:latest[0m                [39m9a6f0ce45b9d[0m        [39m985MB[0m          [39m235MB[0m        
+[34m[1mhome-finance-worker:latest[0m                           [39ma20b606b0501[0m       [39m1.16GB[0m          [39m297MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mmysql:8.4[0m                                            [39mda906917ca4a[0m       [39m1.07GB[0m          [39m229MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mphp:8.4-cli-bookworm[0m                                 [39m138a210978c7[0m        [39m749MB[0m          [39m179MB[0m        
+[34m[1mpostgres:16[0m                                          [39m2586e2a95d1c[0m        [39m657MB[0m          [39m159MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mpostgres:16-alpine[0m                                   [39m16bc17c64a57[0m        [39m389MB[0m          [39m108MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mpostgres:16-bookworm[0m                                 [39m64154d0babcb[0m        [39m635MB[0m          [39m153MB[0m        
+[34m[1mpostgres:17-alpine[0m                                   [39mc7526c0f6c3f[0m        [39m393MB[0m          [39m109MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mpostgres:18-alpine[0m                                   [39m4da1a4828be1[0m        [39m403MB[0m          [39m112MB[0m        
+[34m[1mredis:alpine[0m                                         [39m2afba59292f2[0m        [39m133MB[0m         [39m34.3MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1msail-8.5/app:latest[0m                                  [39m34453d42ddec[0m       [39m3.17GB[0m          [39m827MB[0m   [38;5;0m[48;5;14m U [0m  
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker run -it --name prueba alpine:3.20 sh[27m[43D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27m-[27m-[27mn[27ma[27mm[27me[27m [27mp[27mr[27mu[27me[27mb[27ma[27m [27ma[27ml[27mp[27mi[27mn[27me[27m:[27m3[27m.[27m2[27m0[27m [27ms[27mh[?2004l
+/ # [6ns[Jcat /etc/os-release
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.20.10
+PRETTY_NAME="Alpine Linux v3.20"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+/ # hostname
+72507498f2ea
+/ # ls /
+[1;34mbin[m    [1;34mdev[m    [1;34metc[m    [1;34mhome[m   [1;34mlib[m    [1;34mmedia[m  [1;34mmnt[m    [1;34mopt[m    [1;34mproc[m   [1;34mroot[m   [1;34mrun[m    [1;34msbin[m   [1;34msrv[m    [1;34msys[m    [1;34mtmp[m    [1;34musr[m    [1;34mvar[m
+/ # exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker ps -a --filter "name=prueba"[27m[35D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[27m [27m-[27m-[27mf[27mi[27ml[27mt[27me[27mr[27m [27m"[27mn[27ma[27mm[27me[27m=[27mp[27mr[27mu[27me[27mb[27ma[27m"[?2004l
+CONTAINER ID   IMAGE         COMMAND   CREATED         STATUS                     PORTS     NAMES
+72507498f2ea   alpine:3.20   "sh"      7 minutes ago   Exited (0) 5 seconds ago             prueba
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker start -ai prueba[27m[23D[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27mt[27ma[27mr[27mt[27m [27m-[27ma[27mi[27m [27mp[27mr[27mu[27me[27mb[27ma[?2004l
+/ # [6necho "dato importante" > /tmp/nota.txt
+/ # cat /tmp/nota.txt
+dato importante
+/ # exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker rm prueba[27m
+[7mdocker run -it --name prueba2 alpine:3.20 sh[27m[K[A[14C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mm[27m [27mp[27mr[27mu[27me[27mb[27ma[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27m-[27m-[27mn[27ma[27mm[27me[27m [27mp[27mr[27mu[27me[27mb[27ma[27m2[27m [27ma[27ml[27mp[27mi[27mn[27me[27m:[27m3[27m.[27m2[27m0[27m [27ms[27mh[?2004l
+prueba
+/ # [6ncat /tmp/nota.txt
+cat: can't open '/tmp/nota.txt': No such file or directory
+/ # exitdocker rm prueba
+sh: exitdocker: not found
+/ # docker run -it --name prueba2 alpine:3.20 sh[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[Jdocker rm prueba
+sh: docker: not found
+/ # docker run -it --name prueba2 alpine:3.20 sh
+sh: docker: not found
+/ # [6ncat /tmp/nota.txt
+cat: can't open '/tmp/nota.txt': No such file or directory
+/ # exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker volume create datos-prueba[27m
+[7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[K[A[1C[27md[27mo[27mc[27mk[27me[27mr[27m [27mv[27mo[27ml[27mu[27mm[27me[27m [27mc[27mr[27me[27ma[27mt[27me[27m [27md[27ma[27mt[27mo[27ms[27m-[27mp[27mr[27mu[27me[27mb[27ma[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27m-[27m-[27mr[27mm[27m [27m-[27mv[27m [27md[27ma[27mt[27mo[27ms[27m-[27mp[27mr[27mu[27me[27mb[27ma[27m:[27m/[27md[27ma[27mt[27mo[27ms[27m [27ma[27ml[27mp[27mi[27mn[27me[27m:[27m3[27m.[27m2[27m0[27m [27ms[27mh[?2004l
+datos-prueba
+/ # [6necho "dato importante" > /datos/nota.txt
+/ # exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[57D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27m-[27m-[27mr[27mm[27m [27m-[27mv[27m [27md[27ma[27mt[27mo[27ms[27m-[27mp[27mr[27mu[27me[27mb[27ma[27m:[27m/[27md[27ma[27mt[27mo[27ms[27m [27ma[27ml[27mp[27mi[27mn[27me[27m:[27m3[27m.[27m2[27m0[27m [27ms[27mh[?2004l
+/ # [6ncat /datos/nota.txt
+dato importante
+/ # exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker volume ls[27m
+[7mdocker volume inspect datos-prueba[27m[K[A[24C[27md[27mo[27mc[27mk[27me[27mr[27m [27mv[27mo[27ml[27mu[27mm[27me[27m [27ml[27ms[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mv[27mo[27ml[27mu[27mm[27me[27m [27mi[27mn[27ms[27mp[27me[27mc[27mt[27m [27md[27ma[27mt[27mo[27ms[27m-[27mp[27mr[27mu[27me[27mb[27ma[?2004l
+DRIVER    VOLUME NAME
+local     88bce24836c62970ef34c176b283ef1bc2942016ca83f8f1ef51b6dbdd4683e6
+local     ada466f53279d03b950bd5a60e50dcaff303484dbdbb5b7fb2f194090caeea45
+local     appfutbol_backend_vendor
+local     appfutbol_frontend_node_modules
+local     appfutbol_postgres_data
+local     datos-prueba
+local     examenapp_postgres_data
+local     examenapp_postgres_data_examen
+local     examenapp_redis_data
+local     home-finance_backend_storage
+local     home-finance_postgres_data
+local     mi-proyecto_sail-mysql
+[
+    {
+        "CreatedAt": "2026-10-22T14:07:05Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/datos-prueba/_data",
+        "Name": "datos-prueba",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker run -d --name web -p 8080:80 nginx:alpine[27m
+[7mdocker ps[27m[K
+[7mdocker port web[27m[K[A[A[43C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27md[27m [27m-[27m-[27mn[27ma[27mm[27me[27m [27mw[27me[27mb[27m [27m-[27mp[27m [27m8[27m0[27m8[27m0[27m:[27m8[27m0[27m [27mn[27mg[27mi[27mn[27mx[27m:[27ma[27ml[27mp[27mi[27mn[27me[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27mo[27mr[27mt[27m [27mw[27me[27mb[?2004l
+Unable to find image 'nginx:alpine' locally
+alpine: Pulling from library/nginx
+
+[1A[2Kcbe54b031f3e: Pulling fs layer [1B
+[1A[2Kdbb1ef19121a: Pulling fs layer [1B
+[1A[2Kf523b340a6c0: Pulling fs layer [1B
+[1A[2Kd3531b7a4f21: Pulling fs layer [1B
+[1A[2K7b9d02243238: Pulling fs layer [1B
+[1A[2K1408044c7403: Pulling fs layer [1B
+[1A[2Kc2fefbef5314: Pulling fs layer [1B
+[1A[2K567a969e0221: Pulling fs layer [1B[7A[2Kdbb1ef19121a: Download complete [7B[6A[2Kf523b340a6c0: Downloading [==================================================>]     964B/964B[6B[6A[2Kf523b340a6c0: Download complete [6B[8A[2Kcbe54b031f3e: Downloading [=============>                                     ]  5.243MB/20.11MB[8B[4A[2K7b9d02243238: Download complete [4B[8A[2Kcbe54b031f3e: Downloading [==========================>                        ]  10.49MB/20.11MB[8B[2A[2Kc2fefbef5314: Download complete [2B[8A[2Kcbe54b031f3e: Downloading [====================================>              ]  14.68MB/20.11MB[8B[8A[2Kcbe54b031f3e: Download complete [8B[3A[2K1408044c7403: Download complete [3B[5A[2Kd3531b7a4f21: Downloading [============>                                      ]  1.049MB/4.19MB[5B[1A[2K567a969e0221: Download complete [1B
+[1A[2K2d759c5f2f47: Download complete [1B[6A[2Kd3531b7a4f21: Downloading [============>                                      ]  1.049MB/4.19MB[6B[6A[2Kd3531b7a4f21: Downloading [============>                                      ]  1.049MB/4.19MB[6B
+[1A[2Kdb5a6d6bb46f: Download complete [1B[7A[2Kd3531b7a4f21: Downloading [=========================>                         ]  2.097MB/4.19MB[7B[7A[2Kd3531b7a4f21: Downloading [=========================>                         ]  2.097MB/4.19MB[7B[7A[2Kd3531b7a4f21: Downloading [=====================================>             ]  3.146MB/4.19MB[7B[7A[2Kd3531b7a4f21: Downloading [=====================================>             ]  3.146MB/4.19MB[7B[7A[2Kd3531b7a4f21: Download complete [7B[5A[2K1408044c7403: Extracting 1 s[5B[7A[2Kd3531b7a4f21: Pull complete [7B[9A[2Kdbb1ef19121a: Pull complete [9B[8A[2Kf523b340a6c0: Pull complete [8B[6A[2K7b9d02243238: Pull complete [6B[4A[2Kc2fefbef5314: Pull complete [4B[10A[2Kcbe54b031f3e: Extracting 1 s[10B[5A[2K1408044c7403: Pull complete [5B[3A[2K567a969e0221: Pull complete [3B[10A[2Kcbe54b031f3e: Extracting 1 s[10B[10A[2Kcbe54b031f3e: Pull complete [10BDigest: sha256:a3554c0d0b48177b1413c26e01f695334428020d9df01243fbae3e11cfd17417
+Status: Downloaded newer image for nginx:alpine
+d71006d73352e7f3e1702d2d8bb27bb0c55d6517c7deec7e53b6ce626c735b00
+CONTAINER ID   IMAGE                 COMMAND                  CREATED                  STATUS                  PORTS                                         NAMES
+d71006d73352   nginx:alpine          "/docker-entrypoint.…"   Less than a second ago   Up Less than a second   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       web
+c6cc2a4c0a05   af51cdcf12ea          "docker-php-entrypoi…"   2 months ago             Up 2 days (healthy)     0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   home-finance-backend
+1a8f51f8a839   home-finance-worker   "docker-php-entrypoi…"   2 months ago             Up 11 minutes           8000/tcp                                      home-finance-worker
+e8cdbfaa9a40   postgres:16           "docker-entrypoint.s…"   6 months ago             Up 2 days               0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp   home-finance-db
+80/tcp -> 0.0.0.0:8080
+80/tcp -> [::]:8080
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mdocker logs web[27m
+[7mdocker logs --tail 3 web[27m[K
+[7mdocker exec web ls /usr/share/nginx/html[27m[K
+[7mdocker stats --no-stream web[27m[K[3A[30C[27md[27mo[27mc[27mk[27me[27mr[27m [27ml[27mo[27mg[27ms[27m [27mw[27me[27mb[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27ml[27mo[27mg[27ms[27m [27m-[27m-[27mt[27ma[27mi[27ml[27m [27m3[27m [27mw[27me[27mb[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27me[27mx[27me[27mc[27m [27mw[27me[27mb[27m [27ml[27ms[27m [27m/[27mu[27ms[27mr[27m/[27ms[27mh[27ma[27mr[27me[27m/[27mn[27mg[27mi[27mn[27mx[27m/[27mh[27mt[27mm[27ml[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27mt[27ma[27mt[27ms[27m [27m-[27m-[27mn[27mo[27m-[27ms[27mt[27mr[27me[27ma[27mm[27m [27mw[27me[27mb[?2004l
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2026/10/24 08:56:39 [notice] 1#1: using the "epoll" event method
+2026/10/24 08:56:39 [notice] 1#1: nginx/1.31.8
+2026/10/24 08:56:39 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+2026/10/24 08:56:39 [notice] 1#1: OS: Linux 7.0.14-linuxkit
+2026/10/24 08:56:39 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026/10/24 08:56:39 [notice] 1#1: start worker processes
+2026/10/24 08:56:39 [notice] 1#1: start worker process 30
+2026/10/24 08:56:39 [notice] 1#1: start worker process 31
+2026/10/24 08:56:39 [notice] 1#1: start worker process 32
+2026/10/24 08:56:39 [notice] 1#1: start worker process 33
+2026/10/24 08:56:39 [notice] 1#1: start worker process 34
+2026/10/24 08:56:39 [notice] 1#1: start worker process 35
+2026/10/24 08:56:39 [notice] 1#1: start worker process 36
+2026/10/24 08:56:39 [notice] 1#1: start worker process 37
+2026/10/24 08:56:39 [notice] 1#1: start worker process 38
+2026/10/24 08:56:39 [notice] 1#1: start worker process 39
+2026/10/24 08:56:39 [notice] 1#1: start worker process 40
+2026/10/24 08:56:39 [notice] 1#1: start worker process 41
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET / HTTP/1.1" 200 896 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15" "-"
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15" "-"
+2026/10/24 08:57:04 [error] 31#31: *2 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 153 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari" "-"
+2026/10/24 08:57:04 [error] 32#32: *3 open() "/usr/share/nginx/html/apple-touch-icon-precomposed.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", host: "localhost:8080"
+2026/10/24 08:57:04 [error] 32#32: *3 open() "/usr/share/nginx/html/apple-touch-icon.png" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /apple-touch-icon.png HTTP/1.1", host: "localhost:8080"
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET /apple-touch-icon.png HTTP/1.1" 404 153 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari" "-"
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari" "-"
+2026/10/24 08:57:04 [error] 32#32: *3 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080"
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET /apple-touch-icon.png HTTP/1.1" 404 153 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari" "-"
+192.168.65.1 - - [24/Oct/2026:08:57:04 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari" "-"
+2026/10/24 08:57:04 [error] 32#32: *3 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080"
+50x.html
+index.html
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O     PIDS
+d71006d73352   web       0.00%     11.63MiB / 7.748GiB   0.15%     4.42kB / 3.52kB   0B / 12.3kB   13
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004hd [7mdocker stop web[27m
+[7mdocker rm web prueba2 $(docker ps -aq --filter "ancestor=hello-world")[27m[K
+[7mdocker volume rm datos-prueba[27m[K
+[7mdocker system df[27m[K[3A[42C[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27mt[27mo[27mp[27m [27mw[27me[27mb[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mm[27m [27mw[27me[27mb[27m [27mp[27mr[27mu[27me[27mb[27ma[27m2[27m [27m$[27m([27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[27mq[27m [27m-[27m-[27mf[27mi[27ml[27mt[27me[27mr[27m [27m"[27ma[27mn[27mc[27me[27ms[27mt[27mo[27mr[27m=[27mh[27me[27ml[27ml[27mo[27m-[27mw[27mo[27mr[27ml[27md[27m"[27m)[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27mv[27mo[27ml[27mu[27mm[27me[27m [27mr[27mm[27m [27md[27ma[27mt[27mo[27ms[27m-[27mp[27mr[27mu[27me[27mb[27ma[1B[27md[27mo[27mc[27mk[27me[27mr[27m [27ms[27my[27ms[27mt[27me[27mm[27m [27md[27mf[?2004l
+web
+web
+prueba2
+34bc7dc00f1e
+datos-prueba
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          27        11        30.71GB   17.35GB (56%)
+Containers      12        3         143.5MB   143.4MB (99%)
+Local Volumes   11        8         955MB     133.6MB (13%)
+Build Cache     407       0         24.34GB   11.1GB
+[1m[7m%[27m[1m[0m                                                                                                                                                                   ]7;file://MacBook-Pro-de-Alvaro.local/Users/alvaro/Desktop/DEV/oracle-database-lab[0m[27m[24m[J(base) alvaro@MacBook-Pro-de-Alvaro oracle-database-lab % [K[?2004h[7mexit[27m[27me[27mx[27mi[27mt[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...none found.
