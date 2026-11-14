@@ -116,3 +116,46 @@ una configuración válida.
 
 CREATE SPFILE FROM PFILE='/ruta/init_bueno.ora' permite reconstruir
 el SPFILE a partir de esa configuración para futuros arranques.
+
+## Parte G — Memoria y experimento de caché
+
+La instancia utiliza ASMM, con SGA_TARGET = 1536M.
+La PGA se gestiona aparte, con PGA_AGGREGATE_TARGET = 512M
+y PGA_AGGREGATE_LIMIT = 2G.
+
+DB_CACHE_SIZE = 0 permite que ASMM determine el tamaño
+del buffer cache, sin un mínimo fijado manualmente.
+
+### Interpretación del experimento
+
+Ambas rondas devuelven 17.600 estudiantes activos.
+
+- Caché fría: 463 lecturas lógicas y 265 físicas.
+- Caché caliente: 247 lecturas lógicas y 0 físicas.
+- Bloques de ACA_ESTUDIANTES en caché al terminar: 245.
+- Tasa de acierto de la segunda ronda: 1 − 0/247 = 100 %.
+
+La segunda ejecución aprovecha los bloques cargados en memoria.
+Las cifras de la primera ronda incluyen trabajo adicional de
+la sesión; por eso difieren del ejemplo ilustrativo del PDF.
+
+Las 244 unidades de BLOCKS corresponden a estadísticas de la
+tabla. Los 245 bloques observados en caché son coherentes con
+los bloques de datos y la cabecera del segmento.
+
+## P9 — ASMM y DB_CACHE_SIZE
+
+Respuesta correcta: B.
+
+ASMM gestiona la SGA. Con DB_CACHE_SIZE = 512M se fija
+un mínimo para el buffer cache, que puede crecer por encima
+de ese valor.
+
+## P10 — Estructuras de la PGA
+
+Respuestas correctas: A y D.
+
+El área de ordenación y la memoria de sesión de un servidor
+dedicado forman parte de su PGA.
+
+Shared pool, log buffer y buffer cache pertenecen a la SGA.
