@@ -82,3 +82,37 @@ Respuesta correcta: B, MOUNT.
 
 Para ejecutar ALTER DATABASE ARCHIVELOG, la base debe estar
 montada, pero no abierta.
+
+## Parte F — Configuración y PFILE
+
+La instancia utiliza SPFILE. La exportación desde SPFILE contiene
+32 líneas y la exportación desde memoria, 122 líneas.
+
+La configuración en memoria incluye valores derivados o por defecto
+que no están escritos explícitamente en el SPFILE.
+
+## P6 — SCOPE por defecto
+
+Respuesta correcta: B.
+
+Al arrancar con SPFILE, ALTER SYSTEM SET open_cursors = 500
+utiliza SCOPE=BOTH por defecto: cambia el valor en memoria
+y en el SPFILE, por lo que persiste tras reiniciar.
+
+## P7 — PROCESSES desde una PDB
+
+Respuesta correcta: C.
+
+PROCESSES es un parámetro de instancia y no se puede modificar
+desde FREEPDB1. La operación devuelve ORA-65040, como se ha
+comprobado en el ejercicio.
+
+## P8 — Recuperación ante un SPFILE incorrecto
+
+Respuestas correctas: A y C.
+
+STARTUP PFILE='/ruta/init_bueno.ora' permite arrancar utilizando
+una configuración válida.
+
+CREATE SPFILE FROM PFILE='/ruta/init_bueno.ora' permite reconstruir
+el SPFILE a partir de esa configuración para futuros arranques.
