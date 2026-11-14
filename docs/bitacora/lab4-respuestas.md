@@ -181,7 +181,7 @@ Busqué LGWR desde Linux y encontré db_lgwr_FREE con el PID 1942.
 
 Abrí una sesión SQLcl en otra pestaña y repetí el guion. Entonces apareció un proceso servidor dedicado:
 
-20767  122  oracleFREE (LOCAL=NO)
+20767 122 oracleFREE (LOCAL=NO)
 
 LOCAL=NO indica que la conexión llegó por red a través del listener.
 
@@ -261,9 +261,9 @@ Referencia: 20261111T175544Z_03-reubicar-datafiles.script.log, con la copia fís
 
 V000 ya se había ejecutado. Si la modificara, el repositorio dejaría de reflejar exactamente la migración aplicada. Por eso utilicé una migración nueva para conservar el historial y aplicar la corrección en otros entornos.
 
-Borrar una contraseña de un archivo tampoco la invalida: puede seguir apareciendo en commits anteriores o en otras copias. Con V003, las cuentas ADMIN_* pasaron a ser cuentas de solo esquema, por lo que sus antiguas contraseñas dejaron de servir para iniciar sesión.
+Borrar una contraseña de un archivo tampoco la invalida: puede seguir apareciendo en commits anteriores o en otras copias. Con V003, las cuentas ADMIN\_\* pasaron a ser cuentas de solo esquema, por lo que sus antiguas contraseñas dejaron de servir para iniciar sesión.
 
-Referencia: 20261111T180142Z_04-V003__cuentas_esquema_sin_password.spool.log, donde las cinco cuentas muestran AUTHENTICATION_TYPE = NONE.
+Referencia: 20261111T180142Z_04-V003\_\_cuentas_esquema_sin_password.spool.log, donde las cinco cuentas muestran AUTHENTICATION_TYPE = NONE.
 
 ### 7. ¿Qué demuestra la prueba de persistencia y por qué se hace después de reubicar?
 
@@ -434,10 +434,10 @@ Referencia: scripts/lab4/02-cuenta-observabilidad.sql, con los permisos concedid
 
 ### 22. ¿Qué dos vías de exposición de contraseñas se corrigen respecto al Lab 3?
 
-La primera es guardar contraseñas de los propietarios de los esquemas en los archivos SQL versionados. V003 convierte las cuentas ADMIN_* en cuentas sin autenticación, de modo que las contraseñas anteriores dejan de permitir el inicio de sesión.
+La primera es guardar contraseñas de los propietarios de los esquemas en los archivos SQL versionados. V003 convierte las cuentas ADMIN\_\* en cuentas sin autenticación, de modo que las contraseñas anteriores dejan de permitir el inicio de sesión.
 
 La segunda es pasar la contraseña de SYS en la conexión de los guiones, con expresiones como sys/<contraseña>. El guion de migraciones utiliza ahora autenticación del sistema operativo dentro del contenedor mediante / as sysdba.
 
-Las contraseñas que siguen siendo necesarias se mantienen en config/.env, que está excluido de Git. La comprobación de secretos del historial, correspondiente a J.2, todavía está pendiente.
+Las contraseñas que siguen siendo necesarias se mantienen en config/.env, que está excluido de Git. Comprobé las dos contraseñas en los archivos versionados y en el historial local de Git. Ambas búsquedas dieron 0 coincidencias. También comprobé que config/.env, backups/ y los archivos .tar.gz quedaban fuera de Git.
 
-Referencia: 20261111T180142Z_04-V003__cuentas_esquema_sin_password.spool.log y el código de scripts/deployment/env/08-aplicar-migraciones.sh.
+Referencia: 20261111T180142Z_04-V003\_\_cuentas_esquema_sin_password.spool.log y el código de scripts/deployment/env/08-aplicar-migraciones.sh.
