@@ -35,3 +35,18 @@ los cinco datafiles de negocio en /opt/oracle/oradata/FREE/FREEPDB1/.
 
 Evidencia:
 docs/bitacora/lab4/evidencia/script/20261111T175544Z_03-reubicar-datafiles.script.log
+
+## P3 — Instancia y base de datos
+
+Respuestas correctas: A y C.
+
+- A: STARTUP_TIME de V$INSTANCE cambia cada vez que se arranca
+  la instancia. En mi caso muestra 2026-11-14 09:15:00.
+- C: CREATED de V$DATABASE indica cuándo se creó la base,
+  no cuándo arrancó la instancia. En mi caso muestra 2026-07-08.
+
+B es falsa: recrear el contenedor Docker reutilizando la misma
+base en el volumen no cambia su DBID.
+D es falsa: una instancia no puede montar dos bases de datos
+simultáneamente; las PDB pertenecen a la misma CDB.
+E es falsa: V$DATABASE también se puede consultar en estado MOUNT.
